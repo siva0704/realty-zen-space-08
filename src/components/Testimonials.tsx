@@ -75,7 +75,7 @@ const Testimonials = () => {
   return (
     <section 
       id="testimonials" 
-      className="py-24 md:py-30 bg-Nestora-blue/5 w-full"
+      className="py-20 md:py-30 bg-Nestora-blue/5 w-full"
       ref={sectionRef}
     >
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
