@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -76,7 +75,7 @@ const Testimonials = () => {
   return (
     <section 
       id="testimonials" 
-      className="py-24 md:py-32 bg-estate-blue/5 w-full"
+      className="py-24 md:py-30 bg-estate-blue/5 w-full"
       ref={sectionRef}
     >
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
@@ -103,22 +102,22 @@ const Testimonials = () => {
           isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
         )}>
           {/* Testimonial Carousel */}
-          <div className="glass-panel rounded-2xl p-8 md:p-16 relative overflow-hidden">
+          <div className="glass-panel rounded-2xl p-6 md:p-12 relative overflow-hidden min-h-[400px] md:min-h-[350px]">
             <div className="absolute top-8 right-8 md:top-12 md:right-12 text-estate-blue/20">
-              <Quote size={100} />
+              <Quote size={80} className="md:w-24 md:h-24" />
             </div>
             
-            <div className="relative z-10">
+            <div className="relative z-10 h-full">
               {testimonials.map((testimonial, index) => (
                 <div 
                   key={testimonial.id}
                   className={cn(
-                    "transition-opacity duration-500 absolute inset-0",
-                    activeIndex === index ? "opacity-100 z-10" : "opacity-0 z-0"
+                    "transition-opacity duration-500 h-full",
+                    activeIndex === index ? "opacity-100 relative" : "opacity-0 absolute inset-0"
                   )}
                 >
-                  <div className="flex flex-col md:flex-row gap-8 items-center">
-                    <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden flex-shrink-0 border-4 border-white shadow-lg">
+                  <div className="flex flex-col md:flex-row gap-8 items-center h-full">
+                    <div className="w-24 h-24 md:w-40 md:h-40 rounded-full overflow-hidden flex-shrink-0 border-4 border-white shadow-lg mx-auto md:mx-0">
                       <img 
                         src={testimonial.image} 
                         alt={testimonial.name} 
@@ -126,13 +125,13 @@ const Testimonials = () => {
                       />
                     </div>
                     
-                    <div className="flex-1">
-                      <p className="text-xl md:text-2xl italic text-gray-700 mb-8">
+                    <div className="flex-1 text-center md:text-left">
+                      <p className="text-lg md:text-2xl italic text-gray-700 mb-6 md:mb-8">
                         "{testimonial.content}"
                       </p>
                       <div>
-                        <h4 className="text-2xl font-bold">{testimonial.name}</h4>
-                        <p className="text-lg text-gray-500">{testimonial.role}</p>
+                        <h4 className="text-xl md:text-2xl font-bold">{testimonial.name}</h4>
+                        <p className="text-md md:text-lg text-gray-500">{testimonial.role}</p>
                       </div>
                     </div>
                   </div>
@@ -141,37 +140,37 @@ const Testimonials = () => {
             </div>
 
             {/* Navigation Dots */}
-            <div className="flex justify-center gap-3 mt-12">
+            <div className="flex justify-center gap-3 mt-8 md:mt-12 absolute bottom-6 left-0 right-0">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   className={cn(
-                    "w-4 h-4 rounded-full transition-all",
+                    "w-3 h-3 md:w-4 md:h-4 rounded-full transition-all",
                     activeIndex === index 
                       ? "bg-estate-blue scale-100" 
                       : "bg-gray-300 scale-75 hover:scale-90"
                   )}
                   onClick={() => setActiveIndex(index)}
-                  aria-label={`Go to testimonial ${index + 1}`}
+                  aria-label={`Go to testimonial ₹{index + 1}`}
                 />
               ))}
             </div>
             
             {/* Navigation Arrows */}
             <button 
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-gray-100 transition-colors"
+              className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-gray-100 transition-colors z-20"
               onClick={prevTestimonial}
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
             </button>
             
             <button 
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-gray-100 transition-colors"
+              className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-gray-100 transition-colors z-20"
               onClick={nextTestimonial}
               aria-label="Next testimonial"
             >
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
             </button>
           </div>
         </div>

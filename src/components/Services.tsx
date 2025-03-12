@@ -69,7 +69,7 @@ const Services = () => {
   return (
     <section 
       id="services" 
-      className="py-20 bg-gray-50"
+      className="py-18 bg-gray-50"
       ref={sectionRef}
     >
       <div className="section-container">
@@ -118,7 +118,7 @@ const ServiceCard = ({ service, isVisible, delay }: ServiceCardProps) => {
 
   const handleLearnMore = () => {
     // In a real app, this would navigate to the service detail page
-    alert(`Learn more about ${title}. This would navigate to a detailed page about this service in a production environment.`);
+    alert(`Learn more about ₹{title}. This would navigate to a detailed page about this service in a production environment.`);
   };
 
   return (
@@ -127,9 +127,9 @@ const ServiceCard = ({ service, isVisible, delay }: ServiceCardProps) => {
         "bg-white rounded-xl p-6 hover:shadow-md transition-all duration-500 border border-gray-100",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       )}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ transitionDelay: `₹{delay}ms` }}
     >
-      <div className={`w-12 h-12 ${color} rounded-lg flex items-center justify-center mb-5`}>
+      <div className={`w-12 h-12 ₹{color} rounded-lg flex items-center justify-center mb-5`}>
         <Icon className="h-6 w-6 text-white" />
       </div>
       <h3 className="text-xl font-bold mb-3">{title}</h3>

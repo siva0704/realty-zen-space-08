@@ -10,7 +10,7 @@ const properties = [
   {
     id: 1,
     title: "Modern Minimalist Villa",
-    price: "$1,250,000",
+    price: "₹1,250,000",
     address: "123 Skyline Drive, Beverly Hills",
     beds: 4,
     baths: 3,
@@ -22,7 +22,7 @@ const properties = [
   {
     id: 2,
     title: "Luxury Beachfront Condo",
-    price: "$5,500/mo",
+    price: "₹5,500/mo",
     address: "456 Ocean View, Miami Beach",
     beds: 3,
     baths: 2.5,
@@ -34,7 +34,7 @@ const properties = [
   {
     id: 3,
     title: "Contemporary City Apartment",
-    price: "$850,000",
+    price: "₹850,000",
     address: "789 Urban Square, New York",
     beds: 2,
     baths: 2,
@@ -46,7 +46,7 @@ const properties = [
   {
     id: 4,
     title: "Panoramic Mountain Retreat",
-    price: "$3,200,000",
+    price: "₹3,200,000",
     address: "101 Highland Park, Aspen",
     beds: 5,
     baths: 4.5,
@@ -143,7 +143,7 @@ const PropertyCard = ({ property, isVisible, delay }: PropertyCardProps) => {
           ? "opacity-100 translate-y-0" 
           : "opacity-0 translate-y-10"
       )}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ transitionDelay: `₹{delay}ms` }}
     >
       {/* Image container */}
       <div className="relative img-hover-zoom h-64">

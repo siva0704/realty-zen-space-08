@@ -71,7 +71,7 @@ const Hero = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative w-full max-w-7xl mx-auto px-6 md:px-12">
+      <div className="relative w-full max-w-7xl mx-auto px-6 md:px-12 py-6 md:py-12">
         <div className="max-w-3xl animate-fade-in animation-delay-200">
           <div className="inline-flex items-center rounded-full bg-white bg-opacity-20 backdrop-blur-sm px-4 py-1.5 mb-6">
             <span className="text-white text-sm font-medium">Discover Your Dream Property</span>
@@ -126,7 +126,7 @@ const Hero = () => {
               ))}
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               <div className="relative">
                 <label className="block text-sm font-medium text-gray-500 mb-2">Location</label>
                 <div className="relative">
@@ -141,7 +141,7 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="relative">
+              {/* <div className="relative">
                 <label className="block text-sm font-medium text-gray-500 mb-2">Property Type</label>
                 <div className="relative">
                   <Home className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
@@ -153,7 +153,7 @@ const Hero = () => {
                     <option>Land</option>
                   </select>
                 </div>
-              </div>
+              </div> */}
               
               <div className="relative">
                 <label className="block text-sm font-medium text-gray-500 mb-2">Price Range</label>
@@ -161,10 +161,10 @@ const Hero = () => {
                   <Building className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                   <select className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-estate-blue appearance-none">
                     <option>Any Price</option>
-                    <option>$100k - $200k</option>
-                    <option>$200k - $500k</option>
-                    <option>$500k - $1M</option>
-                    <option>$1M+</option>
+                    <option>₹1000 ₹2000</option>
+                    <option>₹2000 - ₹5000</option>
+                    <option>₹5000 - ₹10000</option>
+                    <option>₹10000+</option>
                   </select>
                 </div>
               </div>

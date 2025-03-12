@@ -59,7 +59,7 @@ const ContactSection = () => {
   return (
     <section 
       id="contact" 
-      className="py-20 bg-estate-light"
+      className="py-16 bg-estate-light"
       ref={sectionRef}
     >
       <div className="section-container">
@@ -165,7 +165,7 @@ const ContactSection = () => {
                       name="name"
                       value={formState.name}
                       onChange={handleInputChange}
-                      placeholder="John Doe"
+                      placeholder="Name"
                       className="w-full"
                       required
                     />
@@ -181,7 +181,7 @@ const ContactSection = () => {
                       type="email"
                       value={formState.email}
                       onChange={handleInputChange}
-                      placeholder="john@example.com"
+                      placeholder="Enter your email"
                       className="w-full"
                       required
                     />
@@ -197,7 +197,7 @@ const ContactSection = () => {
                       type="tel"
                       value={formState.phone}
                       onChange={handleInputChange}
-                      placeholder="(555) 123-4567"
+                      placeholder="(91+)"
                       className="w-full"
                     />
                   </div>
@@ -232,23 +232,7 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className={cn(
-          "mt-20 bg-estate-blue rounded-2xl text-white p-10 md:p-16 text-center relative overflow-hidden transition-all duration-700 delay-400",
-          isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
-        )}>
-          <div className="absolute inset-0 bg-gradient-radial from-blue-400/20 to-transparent"></div>
-          <div className="relative z-10 max-w-3xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Find Your Dream Property?</h3>
-            <p className="text-blue-100 mb-8">
-              Let our experts guide you through the process of finding, buying, or selling your property. 
-              Start your journey with us today.
-            </p>
-            <Button className="bg-white hover:bg-gray-100 text-estate-blue rounded-full px-8 py-6 text-base font-medium">
-              Schedule a Consultation <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-        </div>
+
       </div>
     </section>
   );
