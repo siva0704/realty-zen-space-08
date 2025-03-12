@@ -91,7 +91,7 @@ const Localities = () => {
         "text-center max-w-3xl mx-auto mb-16 transition-all duration-700", 
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       )}>
-        <Badge className="bg-estate-blue/10 text-estate-blue hover:bg-estate-blue/20 mb-4">
+        <Badge className="bg-Nestora-blue/10 text-Nestora-blue hover:bg-Nestora-blue/20 mb-4">
           Popular Localities
         </Badge>
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -119,7 +119,7 @@ const Localities = () => {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       )}>
         <Button 
-          className="bg-estate-blue hover:bg-estate-accent text-white rounded-full px-8 py-6"
+          className="bg-Nestora-blue hover:bg-Nestora-accent text-white rounded-full px-8 py-6"
           onClick={handleViewAllLocalities}
         >
           View All Localities <ArrowRight className="ml-2 h-5 w-5" />
@@ -169,7 +169,7 @@ const LocalityCard = ({ locality, isVisible, delay }: LocalityCardProps) => {
             <p className="text-xs opacity-70">{locality.properties} properties</p>
           </div>
           <Button 
-            className="bg-white hover:bg-gray-100 text-estate-dark rounded-full w-10 h-10 p-0 flex items-center justify-center"
+            className="bg-white hover:bg-gray-100 text-Nestora-dark rounded-full w-10 h-10 p-0 flex items-center justify-center"
             onClick={handleViewLocality}
             aria-label={`View ₹{locality.name}`}
           >

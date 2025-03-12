@@ -66,7 +66,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				estate: {
+				Nestora: {
 					blue: 'rgb(42 23 120)',
 					dark: '#1A1F2C',
 					light: '#F6F6F7',

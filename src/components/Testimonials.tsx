@@ -8,21 +8,21 @@ const testimonials = [
     id: 1,
     name: "Sarah Johnson",
     role: "First-time Home Buyer",
-    content: "EstateHub made finding my first home so easy. Their expert team guided me through every step of the process with patience and professionalism.",
+    content: "Nestora made finding my first home so easy. Their expert team guided me through every step of the process with patience and professionalism.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
   },
   {
     id: 2,
     name: "Michael Chen",
     role: "Property Investor",
-    content: "I've worked with many real estate agencies, but EstateHub stands out for their market knowledge and attention to detail. My investment portfolio has grown significantly thanks to their guidance.",
+    content: "I've worked with many real Nestora agencies, but Nestora stands out for their market knowledge and attention to detail. My investment portfolio has grown significantly thanks to their guidance.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
   },
   {
     id: 3,
     name: "Emily Rodriguez",
     role: "Luxury Home Seller",
-    content: "The marketing strategy EstateHub developed for my luxury property was exceptional. They found the perfect buyer in just three weeks, exceeding my asking price expectations.",
+    content: "The marketing strategy Nestora developed for my luxury property was exceptional. They found the perfect buyer in just three weeks, exceeding my asking price expectations.",
     image: "https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
   },
 ];
@@ -75,12 +75,12 @@ const Testimonials = () => {
   return (
     <section 
       id="testimonials" 
-      className="py-24 md:py-30 bg-estate-blue/5 w-full"
+      className="py-24 md:py-30 bg-Nestora-blue/5 w-full"
       ref={sectionRef}
     >
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Badge className="bg-estate-blue/10 text-estate-blue hover:bg-estate-blue/20 mb-4">
+          <Badge className="bg-Nestora-blue/10 text-Nestora-blue hover:bg-Nestora-blue/20 mb-4">
             Client Testimonials
           </Badge>
           <h2 className={cn(
@@ -103,7 +103,7 @@ const Testimonials = () => {
         )}>
           {/* Testimonial Carousel */}
           <div className="glass-panel rounded-2xl p-6 md:p-16 relative overflow-hidden min-h-[400px] md:min-h-[350px]">
-            <div className="absolute top-8 right-8 md:top-12 md:right-12 text-estate-blue/20">
+            <div className="absolute top-8 right-8 md:top-12 md:right-12 text-Nestora-blue/20">
               <Quote size={80} className="md:w-24 md:h-24" />
             </div>
             
@@ -147,7 +147,7 @@ const Testimonials = () => {
                   className={cn(
                     "w-3 h-3 md:w-4 md:h-4 rounded-full transition-all",
                     activeIndex === index 
-                      ? "bg-estate-blue scale-100" 
+                      ? "bg-Nestora-blue scale-100" 
                       : "bg-gray-300 scale-75 hover:scale-90"
                   )}
                   onClick={() => setActiveIndex(index)}

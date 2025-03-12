@@ -59,12 +59,12 @@ const ContactSection = () => {
   return (
     <section 
       id="contact" 
-      className="py-16 bg-estate-light"
+      className="py-16 bg-Nestora-light"
       ref={sectionRef}
     >
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Badge className="bg-estate-blue/10 text-estate-blue hover:bg-estate-blue/20 mb-4">
+          <Badge className="bg-Nestora-blue/10 text-Nestora-blue hover:bg-Nestora-blue/20 mb-4">
             Contact Us
           </Badge>
           <h2 className={cn(
@@ -92,18 +92,18 @@ const ContactSection = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="bg-estate-blue/10 rounded-full p-3 mr-4">
-                    <MapPin className="h-6 w-6 text-estate-blue" />
+                  <div className="bg-Nestora-blue/10 rounded-full p-3 mr-4">
+                    <MapPin className="h-6 w-6 text-Nestora-blue" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Office Address</h4>
-                    <p className="text-gray-600">123 Real Estate Ave, Suite 500<br />Beverly Hills, CA 90210</p>
+                    <p className="text-gray-600">123 Real Nestora Ave, Suite 500<br />Beverly Hills, CA 90210</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-estate-blue/10 rounded-full p-3 mr-4">
-                    <Phone className="h-6 w-6 text-estate-blue" />
+                  <div className="bg-Nestora-blue/10 rounded-full p-3 mr-4">
+                    <Phone className="h-6 w-6 text-Nestora-blue" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Phone Number</h4>
@@ -113,13 +113,13 @@ const ContactSection = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-estate-blue/10 rounded-full p-3 mr-4">
-                    <Mail className="h-6 w-6 text-estate-blue" />
+                  <div className="bg-Nestora-blue/10 rounded-full p-3 mr-4">
+                    <Mail className="h-6 w-6 text-Nestora-blue" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Email Address</h4>
-                    <p className="text-gray-600">info@estatehub.com</p>
-                    <p className="text-gray-600">support@estatehub.com</p>
+                    <p className="text-gray-600">info@Nestora.com</p>
+                    <p className="text-gray-600">support@Nestora.com</p>
                   </div>
                 </div>
               </div>
@@ -218,14 +218,14 @@ const ContactSection = () => {
                   </div>
                 </div>
                 
-                <Button type="submit" className="bg-estate-blue hover:bg-estate-accent text-white w-full py-6">
+                <Button type="submit" className="bg-Nestora-blue hover:bg-Nestora-accent text-white w-full py-6">
                   Send Message <Send className="ml-2 h-4 w-4" />
                 </Button>
               </form>
               
               <div className="mt-6 text-center">
                 <p className="text-sm text-gray-500">
-                  By submitting this form, you agree to our <a href="#" className="text-estate-blue underline">Terms of Service</a> and <a href="#" className="text-estate-blue underline">Privacy Policy</a>.
+                  By submitting this form, you agree to our <a href="#" className="text-Nestora-blue underline">Terms of Service</a> and <a href="#" className="text-Nestora-blue underline">Privacy Policy</a>.
                 </p>
               </div>
             </div>

@@ -78,16 +78,16 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Find Your <span className="text-estate-blue">Perfect Place</span> to Call Home
+            Find Your <span className="text-Nestora-blue">Perfect Place</span> to Call Home
           </h1>
           
           <p className="text-white text-lg md:text-xl mb-8 max-w-2xl">
-            Explore premium properties in top locations with our expert real estate services tailored to your needs.
+            Explore premium properties in top locations with our expert real Nestora services tailored to your needs.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button 
-              className="bg-estate-blue hover:bg-estate-accent text-white rounded-full px-8 py-6 text-base"
+              className="bg-Nestora-blue hover:bg-Nestora-accent text-white rounded-full px-8 py-6 text-base"
               onClick={() => scrollToSection('properties')}
             >
               Explore Properties <ArrowRight className="ml-2 h-5 w-5" />
@@ -116,7 +116,7 @@ const Hero = () => {
                   className={cn(
                     "px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200",
                     selectedType === type 
-                      ? "bg-estate-blue text-white" 
+                      ? "bg-Nestora-blue text-white" 
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                   )}
                   onClick={() => setSelectedType(type)}
@@ -131,7 +131,7 @@ const Hero = () => {
                 <label className="block text-sm font-medium text-gray-500 mb-2">Location</label>
                 <div className="relative">
                   <MapPin className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                  <select className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-estate-blue appearance-none">
+                  <select className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-Nestora-blue appearance-none">
                     <option>Any Location</option>
                     <option>New York</option>
                     <option>Los Angeles</option>
@@ -145,7 +145,7 @@ const Hero = () => {
                 <label className="block text-sm font-medium text-gray-500 mb-2">Property Type</label>
                 <div className="relative">
                   <Home className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                  <select className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-estate-blue appearance-none">
+                  <select className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-Nestora-blue appearance-none">
                     <option>Any Type</option>
                     <option>House</option>
                     <option>Apartment</option>
@@ -159,7 +159,7 @@ const Hero = () => {
                 <label className="block text-sm font-medium text-gray-500 mb-2">Price Range</label>
                 <div className="relative">
                   <Building className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                  <select className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-estate-blue appearance-none">
+                  <select className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-Nestora-blue appearance-none">
                     <option>Any Price</option>
                     <option>₹1000 ₹2000</option>
                     <option>₹2000 - ₹5000</option>
@@ -173,7 +173,7 @@ const Hero = () => {
             <div className="mt-6">
               <Button 
                 type="submit" 
-                className="w-full bg-estate-blue hover:bg-estate-accent text-white rounded-lg py-6"
+                className="w-full bg-Nestora-blue hover:bg-Nestora-accent text-white rounded-lg py-6"
               >
                 Search Properties
               </Button>

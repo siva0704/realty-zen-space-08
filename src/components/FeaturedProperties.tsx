@@ -95,7 +95,7 @@ const FeaturedProperties = () => {
       )}>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div>
-            <Badge className="bg-estate-blue/10 text-estate-blue hover:bg-estate-blue/20 mb-4">
+            <Badge className="bg-Nestora-blue/10 text-Nestora-blue hover:bg-Nestora-blue/20 mb-4">
               Featured Properties
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Discover Our Premium Selection</h2>
@@ -104,7 +104,7 @@ const FeaturedProperties = () => {
             </p>
           </div>
           <div className="mt-6 md:mt-0">
-            <Button className="bg-white hover:bg-gray-50 text-estate-dark border border-gray-200 rounded-full group">
+            <Button className="bg-white hover:bg-gray-50 text-Nestora-dark border border-gray-200 rounded-full group">
               View All Properties
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -156,7 +156,7 @@ const PropertyCard = ({ property, isVisible, delay }: PropertyCardProps) => {
           <Badge className={cn(
             "text-xs font-semibold px-3 py-1",
             property.type === "For Sale" 
-              ? "bg-estate-blue text-white" 
+              ? "bg-Nestora-blue text-white" 
               : "bg-purple-500 text-white"
           )}>
             {property.type}
@@ -183,7 +183,7 @@ const PropertyCard = ({ property, isVisible, delay }: PropertyCardProps) => {
       {/* Content */}
       <div className="p-5">
         <div className="mb-2">
-          <h3 className="text-lg font-bold text-estate-dark mb-1">{property.title}</h3>
+          <h3 className="text-lg font-bold text-Nestora-dark mb-1">{property.title}</h3>
           <div className="flex items-center text-gray-500 text-sm">
             <MapPin className="h-3.5 w-3.5 mr-1" />
             <span>{property.address}</span>
@@ -191,7 +191,7 @@ const PropertyCard = ({ property, isVisible, delay }: PropertyCardProps) => {
         </div>
 
         <div className="flex justify-between items-center mb-4">
-          <div className="text-estate-blue font-bold text-xl">{property.price}</div>
+          <div className="text-Nestora-blue font-bold text-xl">{property.price}</div>
         </div>
 
         <div className="border-t border-gray-100 pt-4 flex justify-between">

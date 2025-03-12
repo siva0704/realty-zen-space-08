@@ -29,7 +29,7 @@ const servicesData = [
   {
     id: 4,
     title: "Investment Consulting",
-    description: "Make informed decisions with our expert real estate investment consulting.",
+    description: "Make informed decisions with our expert real Nestora investment consulting.",
     icon: User,
     color: "bg-indigo-700",
   }
@@ -81,20 +81,20 @@ const Services = () => {
     >
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Badge className="bg-estate-blue/10 text-estate-blue hover:bg-estate-blue/20 mb-4">
+          <Badge className="bg-Nestora-blue/10 text-Nestora-blue hover:bg-Nestora-blue/20 mb-4">
             Our Services
           </Badge>
           <h2 className={cn(
             "text-3xl md:text-4xl font-bold mb-4 transition-all duration-700 delay-100",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}>
-            Comprehensive Real Estate Solutions
+            Comprehensive Real Nestora Solutions
           </h2>
           <p className={cn(
             "text-gray-600 transition-all duration-700 delay-200",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}>
-            We offer a wide range of services to meet all your real estate needs, from finding your dream home to 
+            We offer a wide range of services to meet all your real Nestora needs, from finding your dream home to 
             maximizing your investment returns.
           </p>
         </div>
@@ -144,7 +144,7 @@ const ServiceCard = ({ service, isVisible, delay, scrollToSection }: ServiceCard
       <p className="text-gray-600 mb-4">{description}</p>
       <Button 
         variant="link" 
-        className="p-0 h-auto text-estate-blue hover:text-estate-accent group"
+        className="p-0 h-auto text-Nestora-blue hover:text-Nestora-accent group"
         onClick={handleLearnMore}
       >
         Learn More <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
