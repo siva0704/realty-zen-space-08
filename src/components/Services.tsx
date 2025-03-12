@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Home, Building, Briefcase, User, ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -39,6 +38,7 @@ const servicesData = [
 const Services = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -65,6 +65,13 @@ const Services = () => {
       }
     };
   }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section 
@@ -99,6 +106,7 @@ const Services = () => {
               service={service} 
               isVisible={isVisible}
               delay={index * 100 + 300}
+              scrollToSection={scrollToSection}
             />
           ))}
         </div>
@@ -111,14 +119,14 @@ interface ServiceCardProps {
   service: typeof servicesData[0];
   isVisible: boolean;
   delay: number;
+  scrollToSection: (sectionId: string) => void;
 }
 
-const ServiceCard = ({ service, isVisible, delay }: ServiceCardProps) => {
+const ServiceCard = ({ service, isVisible, delay, scrollToSection }: ServiceCardProps) => {
   const { title, description, icon: Icon, color } = service;
 
   const handleLearnMore = () => {
-    // In a real app, this would navigate to the service detail page
-    alert(`Learn more about ₹{title}. This would navigate to a detailed page about this service in a production environment.`);
+    scrollToSection('contact');
   };
 
   return (
@@ -127,9 +135,9 @@ const ServiceCard = ({ service, isVisible, delay }: ServiceCardProps) => {
         "bg-white rounded-xl p-6 hover:shadow-md transition-all duration-500 border border-gray-100",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       )}
-      style={{ transitionDelay: `₹{delay}ms` }}
+      style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className={`w-12 h-12 ₹{color} rounded-lg flex items-center justify-center mb-5`}>
+      <div className={`w-12 h-12 ${color} rounded-lg flex items-center justify-center mb-5`}>
         <Icon className="h-6 w-6 text-white" />
       </div>
       <h3 className="text-xl font-bold mb-3">{title}</h3>

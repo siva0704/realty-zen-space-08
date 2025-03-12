@@ -102,7 +102,7 @@ const Testimonials = () => {
           isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
         )}>
           {/* Testimonial Carousel */}
-          <div className="glass-panel rounded-2xl p-6 md:p-12 relative overflow-hidden min-h-[400px] md:min-h-[350px]">
+          <div className="glass-panel rounded-2xl p-6 md:p-16 relative overflow-hidden min-h-[400px] md:min-h-[350px]">
             <div className="absolute top-8 right-8 md:top-12 md:right-12 text-estate-blue/20">
               <Quote size={80} className="md:w-24 md:h-24" />
             </div>
