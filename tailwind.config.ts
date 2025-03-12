@@ -68,11 +68,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				estate: {
-					blue: '#1E40AF',
+					blue: '#4B0082', // Deep indigo - blueberry color
 					dark: '#1A1F2C',
 					light: '#F6F6F7',
 					muted: '#8A898C',
-					accent: '#3B82F6',
+					accent: '#8A2BE2', // Blueviolet - blueberry accent
 				}
 			},
 			borderRadius: {

@@ -11,28 +11,28 @@ const servicesData = [
     title: "Buying Property",
     description: "Find your dream property with our expert guidance through the entire buying process.",
     icon: Home,
-    color: "bg-blue-500",
+    color: "bg-indigo-800",
   },
   {
     id: 2,
     title: "Selling Property",
     description: "Get the best value for your property with our strategic marketing and negotiation.",
     icon: Building,
-    color: "bg-indigo-500",
+    color: "bg-purple-700",
   },
   {
     id: 3,
     title: "Property Management",
     description: "Maximize your investment with our comprehensive property management services.",
     icon: Briefcase,
-    color: "bg-blue-600",
+    color: "bg-violet-700",
   },
   {
     id: 4,
     title: "Investment Consulting",
     description: "Make informed decisions with our expert real estate investment consulting.",
     icon: User,
-    color: "bg-blue-700",
+    color: "bg-indigo-700",
   }
 ];
 
