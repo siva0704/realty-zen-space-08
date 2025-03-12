@@ -116,6 +116,11 @@ interface ServiceCardProps {
 const ServiceCard = ({ service, isVisible, delay }: ServiceCardProps) => {
   const { title, description, icon: Icon, color } = service;
 
+  const handleLearnMore = () => {
+    // In a real app, this would navigate to the service detail page
+    alert(`Learn more about ${title} clicked. This would navigate to a detailed page about this service.`);
+  };
+
   return (
     <div 
       className={cn(
@@ -129,7 +134,11 @@ const ServiceCard = ({ service, isVisible, delay }: ServiceCardProps) => {
       </div>
       <h3 className="text-xl font-bold mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
-      <Button variant="link" className="p-0 h-auto text-estate-blue hover:text-estate-accent group">
+      <Button 
+        variant="link" 
+        className="p-0 h-auto text-estate-blue hover:text-estate-accent group"
+        onClick={handleLearnMore}
+      >
         Learn More <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
       </Button>
     </div>

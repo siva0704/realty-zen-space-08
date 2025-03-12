@@ -30,6 +30,16 @@ const Hero = () => {
   const propertyTypes = ['Residential', 'Commercial', 'Land', 'Luxury'];
   const [selectedType, setSelectedType] = useState('Residential');
 
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    // In a real application, this would navigate to a search results page
+    // For now, we'll scroll to the properties section
+    const propertiesSection = document.getElementById('properties');
+    if (propertiesSection) {
+      propertiesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20">
       {/* Background Images Carousel */}
@@ -68,10 +78,27 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button className="bg-estate-blue hover:bg-estate-accent text-white rounded-full px-8 py-6 text-base">
+            <Button 
+              className="bg-estate-blue hover:bg-estate-accent text-white rounded-full px-8 py-6 text-base"
+              onClick={() => {
+                const propertiesSection = document.getElementById('properties');
+                if (propertiesSection) {
+                  propertiesSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               Explore Properties <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" className="bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 text-white border-white border-opacity-20 rounded-full px-8 py-6 text-base">
+            <Button 
+              variant="outline" 
+              className="bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 text-white border-white border-opacity-20 rounded-full px-8 py-6 text-base"
+              onClick={() => {
+                const servicesSection = document.getElementById('services');
+                if (servicesSection) {
+                  servicesSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               Learn More
             </Button>
           </div>
@@ -82,11 +109,12 @@ const Hero = () => {
           "glass-panel rounded-2xl max-w-4xl transition-all duration-700 transform",
           isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         )}>
-          <div className="p-6 md:p-8">
+          <form onSubmit={handleSearch} className="p-6 md:p-8">
             <div className="flex flex-wrap gap-6 mb-6">
               {propertyTypes.map((type) => (
                 <button
                   key={type}
+                  type="button"
                   className={cn(
                     "px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200",
                     selectedType === type 
@@ -145,11 +173,14 @@ const Hero = () => {
             </div>
             
             <div className="mt-6">
-              <Button className="w-full bg-estate-blue hover:bg-estate-accent text-white rounded-lg py-6">
+              <Button 
+                type="submit" 
+                className="w-full bg-estate-blue hover:bg-estate-accent text-white rounded-lg py-6"
+              >
                 Search Properties
               </Button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>

@@ -31,20 +31,44 @@ const Index = () => {
     
     animateOnScroll();
     
+    // Scroll to the correct section if hash is present in URL
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      }
+    };
+    
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    
     return () => {
-      // Cleanup if needed
+      window.removeEventListener('hashchange', handleHashChange);
     };
   }, []);
 
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       <Header />
-      <Hero />
-      <FeaturedProperties />
-      <Services />
-      <Localities />
-      <Testimonials />
-      <ContactSection />
+      <main>
+        <Hero />
+        <div id="properties">
+          <FeaturedProperties />
+        </div>
+        <Services />
+        <Localities />
+        <div id="testimonials">
+          <Testimonials />
+        </div>
+        <div id="contact">
+          <ContactSection />
+        </div>
+      </main>
       <Footer />
     </div>
   );

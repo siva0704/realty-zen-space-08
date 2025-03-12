@@ -19,6 +19,10 @@ const Header = () => {
     };
   }, []);
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header 
       className={cn(
@@ -39,16 +43,19 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1">
           <NavItem href="#hero" label="Home" />
-          <NavItem href="#about" label="About Us" />
           <NavItem href="#services" label="Services" />
           <NavItem href="#properties" label="Properties" />
-          <NavItem href="#blog" label="Blog" />
+          <NavItem href="#localities" label="Localities" />
+          <NavItem href="#testimonials" label="Testimonials" />
           <NavItem href="#contact" label="Contact Us" />
         </nav>
 
         {/* Contact Button (Desktop) */}
         <div className="hidden md:block">
-          <Button className="bg-estate-blue hover:bg-estate-accent text-white rounded-full px-6 transition-colors duration-300">
+          <Button 
+            className="bg-estate-blue hover:bg-estate-accent text-white rounded-full px-6 transition-colors duration-300"
+            onClick={() => window.location.href="#contact"}
+          >
             Get in Touch
           </Button>
         </div>
@@ -57,6 +64,7 @@ const Header = () => {
         <button 
           className="md:hidden text-estate-dark p-2 focus:outline-none" 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -69,16 +77,30 @@ const Header = () => {
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
+        <button 
+          className="absolute top-6 right-6 text-estate-dark p-2 focus:outline-none" 
+          onClick={closeMenu}
+          aria-label="Close menu"
+        >
+          <X size={24} />
+        </button>
+        
         <nav className="flex flex-col space-y-4">
-          <MobileNavItem href="#hero" label="Home" onClick={() => setIsMenuOpen(false)} />
-          <MobileNavItem href="#about" label="About Us" onClick={() => setIsMenuOpen(false)} />
-          <MobileNavItem href="#services" label="Services" onClick={() => setIsMenuOpen(false)} />
-          <MobileNavItem href="#properties" label="Properties" onClick={() => setIsMenuOpen(false)} />
-          <MobileNavItem href="#blog" label="Blog" onClick={() => setIsMenuOpen(false)} />
-          <MobileNavItem href="#contact" label="Contact Us" onClick={() => setIsMenuOpen(false)} />
+          <MobileNavItem href="#hero" label="Home" onClick={closeMenu} />
+          <MobileNavItem href="#services" label="Services" onClick={closeMenu} />
+          <MobileNavItem href="#properties" label="Properties" onClick={closeMenu} />
+          <MobileNavItem href="#localities" label="Localities" onClick={closeMenu} />
+          <MobileNavItem href="#testimonials" label="Testimonials" onClick={closeMenu} />
+          <MobileNavItem href="#contact" label="Contact Us" onClick={closeMenu} />
         </nav>
         <div className="mt-6">
-          <Button className="bg-estate-blue hover:bg-estate-accent text-white rounded-full w-full">
+          <Button 
+            className="bg-estate-blue hover:bg-estate-accent text-white rounded-full w-full"
+            onClick={() => {
+              window.location.href="#contact";
+              closeMenu();
+            }}
+          >
             Get in Touch
           </Button>
         </div>

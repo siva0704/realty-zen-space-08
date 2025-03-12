@@ -80,6 +80,12 @@ const Localities = () => {
     };
   }, []);
 
+  const handleViewAllLocalities = () => {
+    // In a real app, this would navigate to a localities page
+    // For now, let's just alert
+    alert("View all localities button clicked. This would navigate to a full localities listing page.");
+  };
+
   return (
     <section id="localities" ref={sectionRef} className="section-container">
       <div className={cn(
@@ -113,7 +119,10 @@ const Localities = () => {
         "mt-12 text-center transition-all duration-700 delay-700", 
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       )}>
-        <Button className="bg-estate-blue hover:bg-estate-accent text-white rounded-full px-8 py-6">
+        <Button 
+          className="bg-estate-blue hover:bg-estate-accent text-white rounded-full px-8 py-6"
+          onClick={handleViewAllLocalities}
+        >
           View All Localities <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
       </div>
@@ -128,6 +137,11 @@ interface LocalityCardProps {
 }
 
 const LocalityCard = ({ locality, isVisible, delay }: LocalityCardProps) => {
+  const handleViewLocality = () => {
+    // In a real app, this would navigate to a specific locality page
+    alert(`Viewing details for ${locality.name}`);
+  };
+
   return (
     <div 
       className={cn(
@@ -155,7 +169,11 @@ const LocalityCard = ({ locality, isVisible, delay }: LocalityCardProps) => {
             <p className="text-sm opacity-80">{locality.price}</p>
             <p className="text-xs opacity-70">{locality.properties} properties</p>
           </div>
-          <Button className="bg-white hover:bg-gray-100 text-estate-dark rounded-full w-10 h-10 p-0 flex items-center justify-center">
+          <Button 
+            className="bg-white hover:bg-gray-100 text-estate-dark rounded-full w-10 h-10 p-0 flex items-center justify-center"
+            onClick={handleViewLocality}
+            aria-label={`View ${locality.name}`}
+          >
             <ArrowRight className="h-5 w-5" />
           </Button>
         </div>
