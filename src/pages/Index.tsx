@@ -38,7 +38,10 @@ const Index = () => {
         const element = document.getElementById(hash.substring(1));
         if (element) {
           setTimeout(() => {
-            element.scrollIntoView({ behavior: 'smooth' });
+            window.scrollTo({
+              top: element.offsetTop - 80, // Offset for header
+              behavior: 'smooth'
+            });
           }, 100);
         }
       }

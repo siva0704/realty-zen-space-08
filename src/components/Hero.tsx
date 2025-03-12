@@ -33,10 +33,18 @@ const Hero = () => {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     // In a real application, this would navigate to a search results page
-    // For now, we'll scroll to the properties section
+    alert("Search initiated! This would navigate to search results page in a production environment.");
+    // Scroll to the properties section as a fallback
     const propertiesSection = document.getElementById('properties');
     if (propertiesSection) {
       propertiesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -80,24 +88,14 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button 
               className="bg-estate-blue hover:bg-estate-accent text-white rounded-full px-8 py-6 text-base"
-              onClick={() => {
-                const propertiesSection = document.getElementById('properties');
-                if (propertiesSection) {
-                  propertiesSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
+              onClick={() => scrollToSection('properties')}
             >
               Explore Properties <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button 
               variant="outline" 
               className="bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 text-white border-white border-opacity-20 rounded-full px-8 py-6 text-base"
-              onClick={() => {
-                const servicesSection = document.getElementById('services');
-                if (servicesSection) {
-                  servicesSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
+              onClick={() => scrollToSection('services')}
             >
               Learn More
             </Button>

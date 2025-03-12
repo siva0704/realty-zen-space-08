@@ -82,8 +82,7 @@ const Localities = () => {
 
   const handleViewAllLocalities = () => {
     // In a real app, this would navigate to a localities page
-    // For now, let's just alert
-    alert("View all localities button clicked. This would navigate to a full localities listing page.");
+    alert("View all localities button clicked. This would navigate to a full localities listing page in a production environment.");
   };
 
   return (
@@ -139,7 +138,7 @@ interface LocalityCardProps {
 const LocalityCard = ({ locality, isVisible, delay }: LocalityCardProps) => {
   const handleViewLocality = () => {
     // In a real app, this would navigate to a specific locality page
-    alert(`Viewing details for ${locality.name}`);
+    alert(`Viewing details for ${locality.name}. This would navigate to a locality details page in a production environment.`);
   };
 
   return (

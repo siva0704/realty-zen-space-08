@@ -23,6 +23,14 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    closeMenu();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header 
       className={cn(
@@ -42,19 +50,19 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1">
-          <NavItem href="#hero" label="Home" />
-          <NavItem href="#services" label="Services" />
-          <NavItem href="#properties" label="Properties" />
-          <NavItem href="#localities" label="Localities" />
-          <NavItem href="#testimonials" label="Testimonials" />
-          <NavItem href="#contact" label="Contact Us" />
+          <NavItem href="#hero" label="Home" onClick={() => scrollToSection('hero')} />
+          <NavItem href="#services" label="Services" onClick={() => scrollToSection('services')} />
+          <NavItem href="#properties" label="Properties" onClick={() => scrollToSection('properties')} />
+          <NavItem href="#localities" label="Localities" onClick={() => scrollToSection('localities')} />
+          <NavItem href="#testimonials" label="Testimonials" onClick={() => scrollToSection('testimonials')} />
+          <NavItem href="#contact" label="Contact Us" onClick={() => scrollToSection('contact')} />
         </nav>
 
         {/* Contact Button (Desktop) */}
         <div className="hidden md:block">
           <Button 
             className="bg-estate-blue hover:bg-estate-accent text-white rounded-full px-6 transition-colors duration-300"
-            onClick={() => window.location.href="#contact"}
+            onClick={() => scrollToSection('contact')}
           >
             Get in Touch
           </Button>
@@ -86,20 +94,17 @@ const Header = () => {
         </button>
         
         <nav className="flex flex-col space-y-4">
-          <MobileNavItem href="#hero" label="Home" onClick={closeMenu} />
-          <MobileNavItem href="#services" label="Services" onClick={closeMenu} />
-          <MobileNavItem href="#properties" label="Properties" onClick={closeMenu} />
-          <MobileNavItem href="#localities" label="Localities" onClick={closeMenu} />
-          <MobileNavItem href="#testimonials" label="Testimonials" onClick={closeMenu} />
-          <MobileNavItem href="#contact" label="Contact Us" onClick={closeMenu} />
+          <MobileNavItem href="#hero" label="Home" onClick={() => scrollToSection('hero')} />
+          <MobileNavItem href="#services" label="Services" onClick={() => scrollToSection('services')} />
+          <MobileNavItem href="#properties" label="Properties" onClick={() => scrollToSection('properties')} />
+          <MobileNavItem href="#localities" label="Localities" onClick={() => scrollToSection('localities')} />
+          <MobileNavItem href="#testimonials" label="Testimonials" onClick={() => scrollToSection('testimonials')} />
+          <MobileNavItem href="#contact" label="Contact Us" onClick={() => scrollToSection('contact')} />
         </nav>
         <div className="mt-6">
           <Button 
             className="bg-estate-blue hover:bg-estate-accent text-white rounded-full w-full"
-            onClick={() => {
-              window.location.href="#contact";
-              closeMenu();
-            }}
+            onClick={() => scrollToSection('contact')}
           >
             Get in Touch
           </Button>
@@ -110,11 +115,15 @@ const Header = () => {
 };
 
 // Desktop Nav Item
-const NavItem = ({ href, label }: { href: string; label: string }) => {
+const NavItem = ({ href, label, onClick }: { href: string; label: string; onClick: () => void }) => {
   return (
     <a 
       href={href}
       className="relative px-4 py-2 text-estate-dark hover:text-estate-blue font-medium text-sm transition-colors duration-200"
+      onClick={(e) => {
+        e.preventDefault();
+        onClick();
+      }}
     >
       {label}
     </a>
@@ -127,7 +136,10 @@ const MobileNavItem = ({ href, label, onClick }: { href: string; label: string, 
     <a 
       href={href}
       className="py-3 text-lg font-medium text-estate-dark border-b border-gray-100"
-      onClick={onClick}
+      onClick={(e) => {
+        e.preventDefault();
+        onClick();
+      }}
     >
       {label}
     </a>

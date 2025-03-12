@@ -118,7 +118,7 @@ const ServiceCard = ({ service, isVisible, delay }: ServiceCardProps) => {
 
   const handleLearnMore = () => {
     // In a real app, this would navigate to the service detail page
-    alert(`Learn more about ${title} clicked. This would navigate to a detailed page about this service.`);
+    alert(`Learn more about ${title}. This would navigate to a detailed page about this service in a production environment.`);
   };
 
   return (
