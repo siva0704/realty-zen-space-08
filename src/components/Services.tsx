@@ -18,21 +18,21 @@ const servicesData = [
     title: "Selling Property",
     description: "Get the best value for your property with our strategic marketing and negotiation.",
     icon: Building,
-    color: "bg-purple-500",
+    color: "bg-indigo-500",
   },
   {
     id: 3,
     title: "Property Management",
     description: "Maximize your investment with our comprehensive property management services.",
     icon: Briefcase,
-    color: "bg-green-500",
+    color: "bg-blue-600",
   },
   {
     id: 4,
     title: "Investment Consulting",
     description: "Make informed decisions with our expert real estate investment consulting.",
     icon: User,
-    color: "bg-orange-500",
+    color: "bg-blue-700",
   }
 ];
 
