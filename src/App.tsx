@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import AllProperties from "./pages/AllProperties";
+import AllLocalities from "./pages/AllLocalities";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -14,10 +15,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/Nestora">
+      <BrowserRouter basename="/realty-zen-space-08">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/properties" element={<AllProperties />} />
+          <Route path="/localities" element={<AllLocalities />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </BrowserRouter>
