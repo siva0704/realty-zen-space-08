@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/realty-zen-space-08/", // Add this for GitHub Pages
+  base: "/Nestora/", // Add this for GitHub Pages
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"), // Fix alias for "@/components/..."
