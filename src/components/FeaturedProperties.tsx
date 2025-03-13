@@ -4,14 +4,15 @@ import { ArrowRight, Bed, Bath, Maximize, MapPin, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 // Property data
 const properties = [
   {
     id: 1,
-    title: "Modern Minimalist Villa",
-    price: "₹1,250,000",
-    address: "123 Skyline Drive, Beverly Hills",
+    title: "Neelgund Developers LLP",
+    price: "₹1,25,000",
+    address: "Renuka Nagar, Hubli",
     beds: 4,
     baths: 3,
     sqft: 2800,
@@ -21,9 +22,9 @@ const properties = [
   },
   {
     id: 2,
-    title: "Luxury Beachfront Condo",
+    title: "Millenium Properties",
     price: "₹5,500/mo",
-    address: "456 Ocean View, Miami Beach",
+    address: "Bairidevarkoppa, Hubli",
     beds: 3,
     baths: 2.5,
     sqft: 1950,
@@ -33,9 +34,9 @@ const properties = [
   },
   {
     id: 3,
-    title: "Contemporary City Apartment",
+    title: "SkyTown Builders",
     price: "₹850,000",
-    address: "789 Urban Square, New York",
+    address: "Keshwapur, Hubli",
     beds: 2,
     baths: 2,
     sqft: 1200,
@@ -45,9 +46,9 @@ const properties = [
   },
   {
     id: 4,
-    title: "Panoramic Mountain Retreat",
+    title: "Marvel Properties",
     price: "₹3,200,000",
-    address: "101 Highland Park, Aspen",
+    address: "Navanagar, Hubli",
     beds: 5,
     baths: 4.5,
     sqft: 3600,
@@ -95,7 +96,7 @@ const FeaturedProperties = () => {
       )}>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div>
-            <Badge className="bg-Nestora-blue/10 text-Nestora-blue hover:bg-Nestora-blue/20 mb-4">
+            <Badge className="bg-estate-blue/10 text-estate-blue hover:bg-estate-blue/20 mb-4">
               Featured Properties
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Discover Our Premium Selection</h2>
@@ -104,10 +105,12 @@ const FeaturedProperties = () => {
             </p>
           </div>
           <div className="mt-6 md:mt-0">
-            <Button className="bg-white hover:bg-gray-50 text-Nestora-dark border border-gray-200 rounded-full group">
-              View All Properties
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link to="/properties">
+              <Button className="bg-white hover:bg-gray-50 text-estate-dark border border-gray-200 rounded-full group hover:text-estate-blue">
+                View All Properties
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -125,6 +128,7 @@ const FeaturedProperties = () => {
     </section>
   );
 };
+
 
 interface PropertyCardProps {
   property: typeof properties[0];

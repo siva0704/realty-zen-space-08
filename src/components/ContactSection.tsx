@@ -97,7 +97,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Office Address</h4>
-                    <p className="text-gray-600">123 Real Nestora Ave, Suite 500<br />Beverly Hills, CA 90210</p>
+                    <p className="text-gray-600">Nestora Ave, Sri Sai Properties,<br />Vidya Nagar, Hubli 580001</p>
                   </div>
                 </div>
                 
@@ -107,8 +107,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Phone Number</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-gray-600">+1 (555) 765-4321</p>
+                    <p className="text-gray-600">(+91) 99026 76457</p>
+                    <p className="text-gray-600">(+91) 99074 58457</p>
                   </div>
                 </div>
                 

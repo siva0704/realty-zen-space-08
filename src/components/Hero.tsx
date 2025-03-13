@@ -133,10 +133,10 @@ const Hero = () => {
                   <MapPin className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                   <select className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-Nestora-blue appearance-none">
                     <option>Any Location</option>
-                    <option>New York</option>
-                    <option>Los Angeles</option>
-                    <option>Miami</option>
-                    <option>Chicago</option>
+                    <option>Bairidevarkoppa</option>
+                    <option>Keshwapur</option>
+                    <option>Renuka Nagar</option>
+                    <option>Navanagar</option>
                   </select>
                 </div>
               </div>

@@ -70,8 +70,9 @@ const Footer = () => {
 
         {/* Contact Info Bar */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8 border-t border-gray-800">
-          <ContactItem icon={<MapPin className="h-5 w-5" />} text="123 Real Nestora Ave, Beverly Hills, CA 90210" />
-          <ContactItem icon={<Phone className="h-5 w-5" />} text="+1 (555) 123-4567" />
+          <ContactItem icon={<MapPin className="h-5 w-5" />} text="Nestora Ave, Sri Sai Properties,
+Vidya Nagar, Hubli 580001" />
+          <ContactItem icon={<Phone className="h-5 w-5" />} text="(+91) 99026 76457" />
           <ContactItem icon={<Mail className="h-5 w-5" />} text="info@Nestora.com" />
         </div>
 
